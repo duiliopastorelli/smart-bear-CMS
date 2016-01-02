@@ -35,11 +35,10 @@ class AddressTest extends PHPUnit_Framework_TestCase
     * Check if the the class Address return the right page
     */
     public $mock_getAddressPages = array(
-        array(
-            'p' => '1',
-            'p' => '0',
-            'p' => '12424546'
-        ));
+        array('p' => '1'),
+        array('p' => '9'),
+        array('p' => '2398573589'),
+    );
 
     public function testGetAddressPage()
     {
@@ -54,10 +53,9 @@ class AddressTest extends PHPUnit_Framework_TestCase
     * Check if the the class Address return the right cat
     */
     public $mock_getAddressCat = array(
-        array(
-            'cat' => 'cat1',
-            'cat' => 'cat2'
-        ));
+        array('cat' => 'cat1'),
+        array('cat' => 'cat2'),
+    );
 
     public function testGetAddressCat()
     {
