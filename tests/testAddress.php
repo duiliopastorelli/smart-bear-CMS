@@ -20,6 +20,18 @@ class AddressTest extends PHPUnit_Framework_TestCase
 
     /**
     * @test
+    * Check if the the class Address return the home page
+    */
+    public $mock_getAddressHome = array();
+
+    public function testGetAddressHome()
+    {
+        $address = new Address($home);
+        $this->assertEquals("home", $address->getAddress($this->mock_getAddressHome), " ==> Failed to test the Home Page.");
+    }
+
+    /**
+    * @test
     * Check if the the class Address return the right page
     */
     public $mock_getAddressPages = array(
