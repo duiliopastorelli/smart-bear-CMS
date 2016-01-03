@@ -3,20 +3,31 @@ namespace SmartBear;
 
 class DB
 {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $password = 'root';
-    private $database = 'smart_bear';
-
-    public function __construct()
+    public function __construct($host, $user, $password, $database)
     {
+        // Build up the var
+        $this->host = $host;
+        $this->user = $user;
+        $this->password = $password;
+        $this->database = $database;
+
+        // Use the php mysqli class to connect to the db
         $mysqli = new \mysqli($this->host, $this->user, $this->password, $this->database);
 
+        // Catch the error if the connection to the db fails
         if ($mysqli->connect_errno) {
             printf("Connect failed %s\n", $mysqli->connect_error);
             exit();
         }
 
-        return $mysqli;
+        // Make available the db connection through $mysqli
+        $this->connection = $mysqli;
+    }
+
+    public function insert($query)
+    {
+        $mysqli = $this->connection;
+        $result = $mysqli->query($query);
+        return $result;
     }
 }

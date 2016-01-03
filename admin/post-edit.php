@@ -3,8 +3,15 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/../src/config.php';
 
-$db = new SmartBear\DB();
+use \SmartBear\Config;
+
+//make available the $db to other classes
+$db = new SmartBear\DB(HOST, USER, PASSWORD, DATABASE);
+
+print_r($db->insert("INSERT INTO posts (post_title, post_content, post_category)
+VALUES ('title', 'content', 'category')"));
 ?>
 <pre><?php print_r($_POST); ?></pre>
 <!DOCTYPE html>
