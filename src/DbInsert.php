@@ -20,6 +20,6 @@ class DbInsert
         VALUES ('$postdata[post_title]', '$postdata[post_content]', '$category')";
 
         // Pass the $query to the db insert function
-        return $db->insert($query);
+        return $db->callDb($query);
     }
 }

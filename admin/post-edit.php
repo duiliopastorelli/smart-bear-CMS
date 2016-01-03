@@ -18,6 +18,10 @@ if (!empty($_POST)) {
 ?>
 
 <pre><?php print_r($_POST); ?></pre>
+<?php
+    $select = new SmartBear\DbSelect;
+?>
+<pre><?php print_r($select->allPosts()); ?></pre>
 <!DOCTYPE html>
 <html>
     <head>

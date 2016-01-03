@@ -24,7 +24,7 @@ class DB
         $this->connection = $mysqli;
     }
 
-    public function insert($query)
+    public function callDb($query)
     {
         $mysqli = $this->connection;
         $result = $mysqli->query($query);

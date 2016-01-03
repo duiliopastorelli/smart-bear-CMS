@@ -8,15 +8,13 @@ A simple CMS for study purpose only
 * Install GIT
 * Clone the repo:
 
-
-    $ git clone git@github.com:duiliopastorelli/smart-bear-CMS.git
+```$ git clone git@github.com:duiliopastorelli/smart-bear-CMS.git```
 
 ## Install Composer
 
 * Install Composer on your local environment
 
-
-    $ curl -s https://getcomposer.org/installer | php
+```$ curl -s https://getcomposer.org/installer | php```
 
 ## Install dependencies
 
