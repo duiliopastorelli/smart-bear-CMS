@@ -527,6 +527,7 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'SmartBear\\Address' => $baseDir . '/src/Address.php',
     'SmartBear\\DB' => $baseDir . '/src/Db.php',
+    'SmartBear\\DbInsert' => $baseDir . '/src/DbInsert.php',
     'Symfony\\Component\\Yaml\\Dumper' => $vendorDir . '/symfony/yaml/Dumper.php',
     'Symfony\\Component\\Yaml\\Escaper' => $vendorDir . '/symfony/yaml/Escaper.php',
     'Symfony\\Component\\Yaml\\Exception\\DumpException' => $vendorDir . '/symfony/yaml/Exception/DumpException.php',
