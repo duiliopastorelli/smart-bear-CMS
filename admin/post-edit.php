@@ -22,6 +22,8 @@ if (!empty($_POST)) {
     $select = new SmartBear\DbSelect;
 ?>
 <pre><?php print_r($select->allPosts()); ?></pre>
+<pre><?php print_r($select->post(1)); ?></pre>
+<pre><?php print_r($select->post(22)); ?></pre>
 <!DOCTYPE html>
 <html>
     <head>
